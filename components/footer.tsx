@@ -39,6 +39,10 @@ export function Footer() {
                 rel="noopener noreferrer"
                 onClick={() => trackCTAClick("footer_app_store", APP_STORE_URL)}
                 className="inline-flex items-center gap-2 bg-background/10 hover:bg-background/20 transition-colors rounded-lg px-4 py-2"
+                data-track-event="click_appstore"
+                data-track-label="Télécharger sur App Store"
+                data-track-id="footer_app_store"
+                data-track-name="footer_app_store"
               >
                 <Apple className="w-5 h-5" />
                 <span className="text-sm">App Store</span>
@@ -49,6 +53,10 @@ export function Footer() {
                 rel="noopener noreferrer"
                 onClick={() => trackCTAClick("footer_play_store", PLAY_STORE_URL)}
                 className="inline-flex items-center gap-2 bg-background/10 hover:bg-background/20 transition-colors rounded-lg px-4 py-2"
+                data-track-event="click_googleplay"
+                data-track-label="Disponible sur Google Play"
+                data-track-id="footer_play_store"
+                data-track-name="footer_play_store"
               >
                 <Play className="w-5 h-5 fill-current" />
                 <span className="text-sm">Google Play</span>

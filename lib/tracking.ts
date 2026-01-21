@@ -130,6 +130,19 @@ export function trackCTAClick(ctaName: string, destination?: string): void {
   if (destination) {
     trackEvent("outbound_click", "navigation", destination)
   }
+
+  // Also push to dataLayer for GTM (for backward compatibility)
+  if (typeof window !== "undefined" && "dataLayer" in window) {
+    const dataLayer = (window as unknown as { dataLayer: unknown[] }).dataLayer
+    dataLayer.push({
+      event: "cta_click",
+      event_category: "conversion",
+      event_label: ctaName,
+      destination: destination || "",
+      page_path: window.location.pathname,
+      page_url: window.location.href,
+    })
+  }
 }
 
 // Track form interactions

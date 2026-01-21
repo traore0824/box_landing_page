@@ -45,7 +45,15 @@ export function HeroSection() {
                 className="bg-foreground text-background hover:bg-foreground/90 h-14 px-6"
                 onClick={() => trackCTAClick("hero_app_store", APP_STORE_URL)}
               >
-                <Link href={APP_STORE_URL} target="_blank" rel="noopener noreferrer">
+                <Link
+                  href={APP_STORE_URL}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  data-track-event="click_appstore"
+                  data-track-label="Télécharger sur App Store"
+                  data-track-id="hero_app_store"
+                  data-track-name="hero_app_store"
+                >
                   <Apple className="w-6 h-6 mr-3" />
                   <div className="text-left">
                     <div className="text-xs opacity-80">Télécharger sur</div>
@@ -60,7 +68,15 @@ export function HeroSection() {
                 className="bg-primary text-primary-foreground hover:bg-primary/90 h-14 px-6"
                 onClick={() => trackCTAClick("hero_play_store", PLAY_STORE_URL)}
               >
-                <Link href={PLAY_STORE_URL} target="_blank" rel="noopener noreferrer">
+                <Link
+                  href={PLAY_STORE_URL}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  data-track-event="click_googleplay"
+                  data-track-label="Disponible sur Google Play"
+                  data-track-id="hero_play_store"
+                  data-track-name="hero_play_store"
+                >
                   <Play className="w-6 h-6 mr-3 fill-current" />
                   <div className="text-left">
                     <div className="text-xs opacity-80">Disponible sur</div>

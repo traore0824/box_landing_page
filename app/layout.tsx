@@ -2,7 +2,8 @@ import type React from "react"
 import type { Metadata, Viewport } from "next"
 import { Inter, Geist_Mono } from "next/font/google"
 import { Analytics } from "@vercel/analytics/next"
-import { GoogleTagManagerScript, GoogleTagManagerNoscript } from "@/components/google-analytics"
+import { GoogleTagManager, GoogleTagManagerNoScript } from "@/components/google-analytics"
+import { GTMAutoTracking } from "@/components/gtm-auto-tracking"
 import "./globals.css"
 
 const _inter = Inter({ subsets: ["latin"] })
@@ -49,8 +50,9 @@ export default function RootLayout({
   return (
     <html lang="fr">
       <body className={`font-sans antialiased`}>
-        <GoogleTagManagerScript />
-        <GoogleTagManagerNoscript />
+        <GoogleTagManagerNoScript />
+        <GoogleTagManager />
+        <GTMAutoTracking />
         {children}
         <Analytics />
       </body>

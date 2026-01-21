@@ -71,7 +71,15 @@ export function HowItWorksSection() {
                   className="w-full bg-primary text-primary-foreground hover:bg-primary/90"
                   onClick={() => trackCTAClick(`step_${index + 1}_cta`, PLAY_STORE_URL)}
                 >
-                  <Link href={PLAY_STORE_URL} target="_blank" rel="noopener noreferrer">
+                  <Link
+                    href={PLAY_STORE_URL}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    data-track-event={`click_${step.cta.toLowerCase().replace(/\s+/g, "_")}`}
+                    data-track-label={step.cta}
+                    data-track-id={`step_${index + 1}_cta`}
+                    data-track-name={`step_${index + 1}_cta`}
+                  >
                     {step.cta}
                   </Link>
                 </Button>

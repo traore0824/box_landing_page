@@ -57,7 +57,15 @@ export function Header() {
               className="bg-primary text-primary-foreground hover:bg-primary/90"
               onClick={() => trackCTAClick("header_download")}
             >
-              <Link href="#hero">Télécharger</Link>
+              <Link
+                href="#hero"
+                data-track-event="click_download"
+                data-track-label="Télécharger"
+                data-track-id="header_download_desktop"
+                data-track-name="header_download"
+              >
+                Télécharger
+              </Link>
             </Button>
           </div>
 
@@ -93,7 +101,15 @@ export function Header() {
                   setIsMenuOpen(false)
                 }}
               >
-                <Link href="#hero">Télécharger</Link>
+                <Link
+                  href="#hero"
+                  data-track-event="click_download"
+                  data-track-label="Télécharger"
+                  data-track-id="header_download_mobile"
+                  data-track-name="header_download_mobile"
+                >
+                  Télécharger
+                </Link>
               </Button>
             </div>
           </nav>
