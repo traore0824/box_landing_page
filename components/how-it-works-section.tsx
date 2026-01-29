@@ -2,7 +2,7 @@
 
 import { useEffect } from "react"
 import Link from "next/link"
-import { UserPlus, PiggyBank, CalendarClock, Sparkles } from "lucide-react"
+import { UserPlus, PiggyBank, CalendarClock, Sparkles, Smartphone } from "lucide-react"
 import { Button } from "@/components/ui/button"
 import { trackSectionView, trackCTAClick } from "@/lib/tracking"
 
@@ -10,26 +10,26 @@ const PLAY_STORE_URL = "https://play.google.com/store/apps/details?id=com.babilo
 
 const steps = [
   {
+    icon: Smartphone,
+    title: "Téléchargement immédiat",
+    description: "Installez Box en un clic depuis l’App Store ou Google Play et commencez à encaisser.",
+    cta: "Télécharger l’application",
+  },
+  {
     icon: UserPlus,
     title: "Inscription rapide",
-    description: "Créez votre compte en quelques secondes avec votre numéro de téléphone.",
+    description: 'Créez votre compte en quelques secondes avec votre numéro de téléphone.',
     cta: "Créer un compte",
   },
   {
     icon: PiggyBank,
-    title: "Créez votre caisse",
-    description: 'Définissez un objectif personnalisé (ex: "Achat de moto", "Études").',
+    title: "Créer une caisse",
+    description: 'Définissez un objectif personnalisé (ex: "Achat de moto", "Études")',
     cta: "Créer une caisse",
   },
   {
-    icon: CalendarClock,
-    title: "Choisissez la fréquence",
-    description: "Quotidien, hebdomadaire ou mensuel - vous décidez du rythme d'épargne.",
-    cta: "Choisir ma fréquence",
-  },
-  {
     icon: Sparkles,
-    title: "Épargnez automatiquement",
+    title: "Commencer à épargner",
     description: "Activez l'épargne automatique ou faites des dépôts manuels selon vos envies.",
     cta: "Commencer à épargner",
   },

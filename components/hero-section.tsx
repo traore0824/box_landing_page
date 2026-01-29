@@ -31,7 +31,7 @@ export function HeroSection() {
             </h1>
 
             <p className="text-lg md:text-xl text-muted-foreground mb-8 max-w-xl mx-auto lg:mx-0 leading-relaxed">
-              Rejoignez des milliers d&apos;utilisateurs qui font confiance à <strong>Box</strong> pour simplifier leur épargne.
+              {/* Rejoignez des milliers d&apos;utilisateurs qui font confiance à <strong>Box</strong> pour simplifier leur épargne. */}
               Que vous soyez entrepreneur, artisan ou particulier, <strong>Box</strong> sécurise votre argent et vous aide à atteindre
               vos objectifs financiers plus vite.
             </p>
@@ -56,8 +56,8 @@ export function HeroSection() {
                 >
                   <Apple className="w-6 h-6 mr-3" />
                   <div className="text-left">
-                    <div className="text-xs opacity-80">Télécharger sur</div>
-                    <div className="text-sm font-semibold">App Store</div>
+                    <div className="text-xs opacity-80">Télécharger sur</div> 
+                    <div className="text-sm font-semibold">App Store</div>    
                   </div>
                 </Link>
               </Button>
@@ -100,9 +100,9 @@ export function HeroSection() {
               <div className="absolute -inset-4 bg-primary/20 rounded-3xl blur-3xl -z-10" />
               <Image
                 src="https://box.api.babilonbg.net/media/000_aWHI7Su.jpeg"
-                alt="Box App - Application d'épargne mobile"
-                width={700}
-                height={400}
+                alt="Box App - Application d'épargne mobile" 
+                width={700} 
+                height={400} 
                 className="w-full h-auto rounded-2xl shadow-2xl"
                 priority
               />
