@@ -99,7 +99,7 @@ export function HeroSection() {
             <div className="relative w-full max-w-lg lg:max-w-xl">
               <div className="absolute -inset-4 bg-primary/20 rounded-3xl blur-3xl -z-10" />
               <Image
-                src="https://box.api.babilonbg.net/media/000_aWHI7Su.jpeg"
+                src="https://box.api.babilonbg.net/media/Emma_nuage.png"
                 alt="Box App - Application d'épargne mobile" 
                 width={700} 
                 height={400} 
