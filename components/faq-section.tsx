@@ -6,29 +6,34 @@ import { trackSectionView, trackCTAClick } from "@/lib/tracking"
 
 const faqs = [
   {
-    question: "Box est-il sécurisé ?",
+    question: "Qui a créé Box la caisse mobile ?",
     answer:
-      "Absolument ! Box utilise des protocoles de sécurité avancés pour protéger vos données et vos économies. Toutes les transactions sont cryptées et nous suivons les meilleures pratiques de l'industrie financière.",
+      "Box la caisse mobile a été créé par BABILON GROUP, une startup technologique qui se veut être une porte ouverte pour l'innovation et des solutions technologiques qui ont du sens et de la valeur pour la population africaine.",
   },
   {
-    question: "Puis-je retirer mon argent à tout moment ?",
+    question: "C'est quoi Box la caisse mobile ?",
     answer:
-      'Cela dépend du mode que vous choisissez. En mode "libre", vous pouvez retirer votre argent quand vous le souhaitez. En mode "bloqué", vos fonds sont verrouillés jusqu\'à l\'atteinte de votre objectif pour vous aider à rester discipliné.',
+      "Box La Caisse Mobile est une application d'épargne qui permet à chacun de mettre de l'argent de côté selon son rythme et ses capacités. Elle offre une gestion simple et sécurisée de vos économies, que ce soit en épargnant seul ou en participant à des projets collectifs.",
   },
   {
-    question: "Y a-t-il des frais pour utiliser Box ?",
+    question: "Comment fonctionne Box la caisse mobile ?",
     answer:
-      "L'inscription et la création de caisses sont entièrement gratuites. Certaines fonctionnalités premium peuvent avoir des frais minimes, mais l'essentiel de l'application reste accessible à tous sans frais.",
+      "Box la caisse mobile BABILON GROUP est une solution d'épargne en ligne qui vous permet de cotiser sur une base journalière, hebdomadaire, mensuelle ou annuelle. Vous pouvez gérer vos comptes d'épargne et fixer vos propres objectifs personnalisés via notre application mobile intuitive.",
   },
   {
-    question: "Comment fonctionne l'épargne automatique ?",
+    question: "Est-ce que je peux retirer mon argent à tout moment ?",
     answer:
-      "Vous définissez un montant et une fréquence (quotidien, hebdomadaire, mensuel). Box prélève automatiquement ce montant selon le calendrier choisi. Vous recevez des notifications de rappel pour rester informé.",
+      "Oui, vous pouvez retirer vos économies à tout moment via l'application. Box la caisse mobile BABILON GROUP offre une flexibilité totale pour que vous puissiez accéder à vos fonds selon vos besoins.",
   },
   {
-    question: "L'application est-elle disponible dans mon pays ?",
+    question: "Qui peut utiliser Box la caisse mobile au quotidien ?",
     answer:
-      "Box est actuellement disponible au Bénin et s'étend progressivement à d'autres pays d'Afrique de l'Ouest. Téléchargez l'application pour vérifier la disponibilité dans votre région.",
+      "Toute personne disposant d'une pièce d'identité valide ou de tout autre document officiel d'identification peut utiliser l'application BOX – la caisse mobile.",
+  },
+  {
+    question: "Quels sont les frais associés à l'utilisation de Box la caisse mobile ?",
+    answer:
+      "Les frais appliqués par BOX la caisse mobile sont de 4 % sur le montant total épargné. Ces frais peuvent atteindre 10 % en cas d'annulation d'une caisse bloquée.",
   },
 ]
 
