@@ -16,6 +16,35 @@ export default function HomePage() {
       <FAQSection />
       <ContactFormSection />
       <Footer />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify({
+            "@context": "https://schema.org",
+            "@type": "SoftwareApplication",
+            "name": "BOX la caisse mobile",
+            "applicationCategory": "FinanceApplication",
+            "operatingSystem": "Android, iOS",
+            "offers": {
+              "@type": "Offer",
+              "price": "0",
+              "priceCurrency": "XOF",
+            },
+            "description":
+              "Box permet aux entrepreneurs, commerçants, artisans, étudiants et particuliers d'épargner facilement et en toute sécurité.",
+            "aggregateRating": {
+              "@type": "AggregateRating",
+              "ratingValue": "4.8",
+              "ratingCount": "1000",
+            },
+            "author": {
+              "@type": "Organization",
+              "name": "Babilon Group",
+              "url": "https://www.babilonbg.net",
+            },
+          }),
+        }}
+      />
     </main>
   )
 }

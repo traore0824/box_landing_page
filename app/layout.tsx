@@ -10,30 +10,52 @@ const _inter = Inter({ subsets: ["latin"] })
 const _geistMono = Geist_Mono({ subsets: ["latin"] })
 
 export const metadata: Metadata = {
+  metadataBase: new URL("https://boxcaissemobile.babilonbg.net"),
   title: "Box - La caisse mobile au cœur de vos économies",
   description:
     "Box permet aux entrepreneurs, commerçants, artisans, étudiants et particuliers d'épargner facilement et en toute sécurité. Créez des caisses personnalisées avec des objectifs et une fréquence d'épargne.",
-  keywords: ["épargne", "mobile", "fintech", "caisse", "économies", "Bénin", "Afrique"],
+  keywords: [
+    "épargne",
+    "tontine",
+    "caisse",
+    "mobile",
+    "argent",
+    "finance",
+    "économie",
+    "banque",
+    "Bénin",
+    "Afrique",
+    "sécurité",
+    "investissement",
+    "futur",
+    "projets",
+    "fintech",
+  ],
   authors: [{ name: "Babilon Group" }],
+  alternates: {
+    canonical: "/",
+  },
   openGraph: {
     title: "Box - La caisse mobile au cœur de vos économies",
     description: "Épargnez facilement et en toute sécurité avec Box",
-    url: "https://www.babilonbg.net",
-    siteName: "Box",
+    url: "https://boxcaissemobile.babilonbg.net",
+    siteName: "Box la caisse mobile",
     locale: "fr_FR",
     type: "website",
+    images: ["/images/box-logo.png"],
   },
   twitter: {
     card: "summary_large_image",
     title: "Box - La caisse mobile",
     description: "Épargnez facilement et en toute sécurité",
+    images: ["/images/box-logo.png"],
   },
   icons: {
     icon: "/images/box-logo.png",
     shortcut: "/images/box-logo.png",
     apple: "/images/box-logo.png",
   },
-    generator: 'v0.app'
+  generator: "v0.app",
 }
 
 export const viewport: Viewport = {
