@@ -56,8 +56,8 @@ export function HeroSection() {
                 >
                   <Apple className="w-6 h-6 mr-3" />
                   <div className="text-left">
-                    <div className="text-xs opacity-80">Télécharger sur</div> 
-                    <div className="text-sm font-semibold">App Store</div>    
+                    <div className="text-xs opacity-80">Télécharger sur</div>
+                    <div className="text-sm font-semibold">App Store</div>
                   </div>
                 </Link>
               </Button>
@@ -87,8 +87,8 @@ export function HeroSection() {
             </div>
 
 
-            
-            
+
+
             {/* <p className="text-sm md:text-base text-muted-foreground mt-6 max-w-xl mx-auto lg:mx-0 leading-relaxed">
               Que vous soyez entrepreneur, artisan ou particulier, Box sécurise votre argent et vous aide à atteindre
               vos objectifs financiers plus vite.
@@ -99,10 +99,10 @@ export function HeroSection() {
             <div className="relative w-full max-w-lg lg:max-w-xl">
               <div className="absolute -inset-4 bg-primary/20 rounded-3xl blur-3xl -z-10" />
               <Image
-                src="https://box.api.babilonbg.net/media/Emma_nuage.png"
-                alt="Box App - Application d'épargne mobile" 
-                width={700} 
-                height={400} 
+                src="https://box.api.babilonbg.net/media/000_aWHI7Su.jpeg"
+                alt="Box App - Application d'épargne mobile"
+                width={700}
+                height={400}
                 className="w-full h-auto rounded-2xl shadow-2xl"
                 priority
               />

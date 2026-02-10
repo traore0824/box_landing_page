@@ -6,7 +6,7 @@ Ce document explique comment configurer Google Tag Manager pour tracker :
 - ✅ Les visiteurs (GA4 automatique)
 - ✅ Les clics sur tous les boutons
 
-**GTM ID du site :** `GTM-P5X9W3ZL`
+**GTM ID du site :** `GTM-NXZHZGKD`
 
 ---
 
@@ -302,6 +302,6 @@ Après publication, vérifier :
 
 **Date de création :** 2024  
 **Dernière mise à jour :** 2024  
-**GTM ID :** GTM-P5X9W3ZL  
+**GTM ID :** GTM-NXZHZGKD  
 **Site :** https://boxcaissemobile.babilonbg.net/
 
