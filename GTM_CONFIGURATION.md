@@ -12,16 +12,13 @@ Ce document explique comment configurer Google Tag Manager pour tracker :
 
 ## 1️⃣ CONFIGURATION DE BASE GA4
 
-### Étape 1 : Créer un Tag GA4 Configuration
+### Étape 1 : Créer la Balise Google (remplace GA4 Configuration)
 
 1. **Aller dans GTM** → **Tags** → **Nouveau**
-2. **Nom du tag :** `GA4 - Configuration`
-3. **Type de tag :** `Google Analytics : GA4 Configuration`
-4. **Measurement ID :** Entrer votre ID GA4 (format : `G-XXXXXXXXXX`)
-5. **Configuration du tag :**
-   - ✅ Cocher **"Send a page view event when this configuration tag loads"**
-   - ✅ Cocher **"Enable enhanced ecommerce"** (optionnel)
-6. **Déclencheur :** `All Pages`
+2. **Nom du tag :** `Balise Google`
+3. **Type de tag :** `Balise Google` (ou `Google Tag`)
+4. **Id de la balise :** Entrer votre ID de mesure GA4 : `G-11S9PKSYSV`
+5. **Déclencheur :** `All Pages` (Initialization - All Pages est recommandé, mais All Pages fonctionne aussi)
 
 ### Étape 2 : Configurer les paramètres GA4 avancés
 
@@ -92,25 +89,16 @@ Le code JavaScript envoie automatiquement dans `dataLayer` les événements suiv
 
 ## 3️⃣ CRÉER LES TRIGGERS GTM
 
-### Étape 1 : Créer un Trigger pour les clics sur boutons
+### Étape 1 : Créer un Trigger pour les clics sur boutons (via dataLayer)
 
-1. **GTM** → **Triggers** → **Nouveau**
-2. **Nom :** `Button Click - All`
-3. **Type :** `Clic - Tous les éléments`
+1. **GTM** → **Déclencheurs (Triggers)** → **Nouveau**
+2. **Nom :** `All Button Clicks`
+3. **Type de déclencheur :** `Événement personnalisé` (Custom Event)
 4. **Configuration :**
-   - **Événement de clic sur :** `Tous les éléments`
-   - **Conditions :**
-     - `Event` égale à `click_download`
-     - OU `Event` égale à `click_appstore`
-     - OU `Event` égale à `click_googleplay`
-     - OU `Event` égale à `click_créer_un_compte`
-     - OU `Event` égale à `click_créer_une_caisse`
-     - OU `Event` égale à `click_choisir_ma_fréquence`
-     - OU `Event` égale à `click_commencer_à_épargner`
-     - OU `Event` contient `click_`
-
-**OU plus simple :** Utiliser un regex :
-   - `Event` correspond à la regex : `^click_.*`
+   - **Nom de l'événement :** Utiliser une expression régulière (regex)
+   - Cocher ✅ **Utiliser une correspondance avec expression régulière**
+   - **Nom de l'événement :** `^click_.*`
+   - Ce déclencheur s'activera pour tous les événements commençant par "click_" (ex: click_download, click_appstore, etc.)
 
 ### Étape 2 : Créer des triggers individuels (optionnel, pour plus de contrôle)
 
@@ -140,7 +128,7 @@ Pour chaque type de clic, créer un trigger séparé :
 2. **Nom :** `GA4 - Button Clicks`
 3. **Type :** `Google Analytics : GA4 Event`
 4. **Configuration :**
-   - **Measurement ID :** Le même que votre tag GA4 Configuration
+   - **Measurement ID :** `G-11S9PKSYSV` (ou sélectionner la variable Google Tag si créée)
    - **Nom de l'événement :** `{{Event}}` (utilise la variable event du dataLayer)
 5. **Paramètres d'événement :**
    - `button_text` : `{{button_text}}`
