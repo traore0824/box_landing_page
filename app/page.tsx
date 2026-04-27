@@ -5,6 +5,7 @@ import { TestimonialsSection } from "@/components/testimonials-section"
 import { FAQSection } from "@/components/faq-section"
 import { ContactFormSection } from "@/components/contact-form-section"
 import { SimulatorSection } from "@/components/simulator-section"
+import { SimulatorModal } from "@/components/simulator-modal"
 import { Footer } from "@/components/footer"
 
 export default function HomePage() {
@@ -17,6 +18,7 @@ export default function HomePage() {
       <TestimonialsSection />
       <FAQSection />
       <ContactFormSection />
+      <SimulatorModal />
       <Footer />
       <script
         type="application/ld+json"

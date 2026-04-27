@@ -5,10 +5,10 @@ import { cn } from "@/lib/utils"
 import { Button } from "@/components/ui/button"
 import { Input } from "@/components/ui/input"
 import { Label } from "@/components/ui/label"
-import { 
-  addMonths, 
-  differenceInDays, 
-  differenceInWeeks, 
+import {
+  addMonths,
+  differenceInDays,
+  differenceInWeeks,
   differenceInMonths,
   format
 } from "date-fns"
@@ -17,7 +17,7 @@ import { Coins, Calendar as CalendarIcon, Target, TrendingUp, ArrowRight } from 
 
 type Frequency = "daily" | "weekly" | "monthly" | "custom"
 
-export function SimulatorSection() {
+export function SimulatorSection({ isModal = false }: { isModal?: boolean }) {
   const [targetAmount, setTargetAmount] = useState<number>(500000)
   const [frequency, setFrequency] = useState<Frequency>("daily")
   const [durationMonths, setDurationMonths] = useState<number>(6)
@@ -53,7 +53,7 @@ export function SimulatorSection() {
   // Update values based on last modified field
   useEffect(() => {
     const numPayments = calculateNumPayments()
-    
+
     if (lastModified === "target") {
       const calculated = Math.round(targetAmount / numPayments)
       setAmountPerPayment(calculated)
@@ -87,9 +87,9 @@ export function SimulatorSection() {
   }
 
   const toggleCustomDay = (day: number) => {
-    setCustomDays(prev => 
-      prev.includes(day) 
-        ? prev.filter(d => d !== day) 
+    setCustomDays(prev =>
+      prev.includes(day)
+        ? prev.filter(d => d !== day)
         : [...prev, day].sort()
     )
     setLastModified("target")
@@ -106,23 +106,30 @@ export function SimulatorSection() {
   ]
 
   return (
-    <section className="py-24 bg-gradient-to-b from-white to-slate-50 dark:from-slate-950 dark:to-slate-900 overflow-hidden relative" id="simulator">
+    <section className={cn(
+      "overflow-hidden relative",
+      !isModal ? "py-24 bg-gradient-to-b from-white to-slate-50 dark:from-slate-950 dark:to-slate-900" : "py-8"
+    )} id="simulator">
       {/* Background decorations */}
-      <div className="absolute top-0 left-1/2 -translate-x-1/2 w-full h-full pointer-events-none overflow-hidden -z-10">
-        <div className="absolute top-[-10%] left-[-10%] w-[40%] h-[40%] bg-gold/5 blur-[120px] rounded-full" />
-        <div className="absolute bottom-[-10%] right-[-10%] w-[40%] h-[40%] bg-gold/10 blur-[120px] rounded-full" />
-      </div>
+      {!isModal && (
+        <div className="absolute top-0 left-1/2 -translate-x-1/2 w-full h-full pointer-events-none overflow-hidden -z-10">
+          <div className="absolute top-[-10%] left-[-10%] w-[40%] h-[40%] bg-gold/5 blur-[120px] rounded-full" />
+          <div className="absolute bottom-[-10%] right-[-10%] w-[40%] h-[40%] bg-gold/10 blur-[120px] rounded-full" />
+        </div>
+      )}
 
       <div className="container px-4 mx-auto">
         <div className="max-w-4xl mx-auto">
-          <div className="text-center mb-16">
-            <h2 className="text-4xl md:text-5xl font-bold tracking-tight mb-4 bg-clip-text text-transparent bg-gradient-to-r from-gold-dark to-gold">
-              Simule ton épargne en quelques clics
-            </h2>
-            <p className="text-lg text-slate-600 dark:text-slate-400 max-w-2xl mx-auto">
-              Visualise ton objectif et découvre combien tu dois mettre de côté pour l'atteindre sereinement.
-            </p>
-          </div>
+          {!isModal && (
+            <div className="text-center mb-16">
+              <h2 className="text-4xl md:text-5xl font-bold tracking-tight mb-4 bg-clip-text text-transparent bg-gradient-to-r from-gold-dark to-gold">
+                Simule ton épargne en quelques clics
+              </h2>
+              <p className="text-lg text-slate-600 dark:text-slate-400 max-w-2xl mx-auto">
+                Visualise ton objectif et découvre combien tu dois mettre de côté pour l'atteindre sereinement.
+              </p>
+            </div>
+          )}
 
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 items-start">
             {/* Inputs Card */}
@@ -240,12 +247,12 @@ export function SimulatorSection() {
                   <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-gold/10 text-gold text-xs font-semibold uppercase tracking-wider mb-8">
                     <Coins className="w-3.5 h-3.5" /> Simulation temps réel
                   </div>
-                  
+
                   <div className="space-y-6">
                     <p className="text-slate-400 leading-relaxed text-lg">
                       Pour atteindre <span className="text-white font-bold">{formatCurrency(targetAmount)}</span> en <span className="text-white font-bold">{durationMonths} mois</span> en épargnant chaque {getFrequencyLabel()}, tu dois mettre :
                     </p>
-                    
+
                     <div className="py-8 border-y border-slate-800/50">
                       <div className="text-5xl md:text-6xl font-black text-white tracking-tight flex items-baseline gap-2">
                         {formatCurrency(amountPerPayment)}
