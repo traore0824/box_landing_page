@@ -9,6 +9,7 @@ import { trackCTAClick } from "@/lib/tracking"
 
 const navLinks = [
   { href: "#fonctionnement", label: "Comment ça marche" },
+  { href: "#simulator", label: "Simulateur" },
   { href: "#temoignages", label: "Témoignages" },
   { href: "#faq", label: "FAQ" },
   { href: "#contact", label: "Contact" },

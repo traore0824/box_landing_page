@@ -4,6 +4,7 @@ import { HowItWorksSection } from "@/components/how-it-works-section"
 import { TestimonialsSection } from "@/components/testimonials-section"
 import { FAQSection } from "@/components/faq-section"
 import { ContactFormSection } from "@/components/contact-form-section"
+import { SimulatorSection } from "@/components/simulator-section"
 import { Footer } from "@/components/footer"
 
 export default function HomePage() {
@@ -12,6 +13,7 @@ export default function HomePage() {
       <Header />
       <HeroSection />
       <HowItWorksSection />
+      <SimulatorSection />
       <TestimonialsSection />
       <FAQSection />
       <ContactFormSection />
