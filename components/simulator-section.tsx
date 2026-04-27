@@ -108,7 +108,7 @@ export function SimulatorSection({ isModal = false }: { isModal?: boolean }) {
   return (
     <section className={cn(
       "overflow-hidden relative",
-      !isModal ? "py-24 bg-gradient-to-b from-white to-slate-50 dark:from-slate-950 dark:to-slate-900" : "py-8"
+      !isModal ? "py-24 bg-gradient-to-b from-white to-slate-50 dark:from-slate-950 dark:to-slate-900" : "py-2 sm:py-4"
     )} id="simulator">
       {/* Background decorations */}
       {!isModal && (
@@ -118,8 +118,8 @@ export function SimulatorSection({ isModal = false }: { isModal?: boolean }) {
         </div>
       )}
 
-      <div className="container px-4 mx-auto">
-        <div className="max-w-4xl mx-auto">
+      <div className={cn(!isModal && "container px-4 mx-auto")}>
+        <div className={cn("mx-auto", !isModal ? "max-w-4xl" : "max-w-full")}>
           {!isModal && (
             <div className="text-center mb-16">
               <h2 className="text-4xl md:text-5xl font-bold tracking-tight mb-4 bg-clip-text text-transparent bg-gradient-to-r from-gold-dark to-gold">
@@ -133,7 +133,7 @@ export function SimulatorSection({ isModal = false }: { isModal?: boolean }) {
 
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 items-start">
             {/* Inputs Card */}
-            <div className="bg-white dark:bg-slate-900 rounded-3xl p-8 shadow-xl shadow-slate-200/50 dark:shadow-none border border-slate-200 dark:border-slate-800 backdrop-blur-xl">
+            <div className="bg-white dark:bg-slate-900 rounded-2xl sm:rounded-3xl p-5 sm:p-8 shadow-xl shadow-slate-200/50 dark:shadow-none border border-slate-200 dark:border-slate-800 backdrop-blur-xl">
               <div className="space-y-8">
                 {/* Objectif */}
                 <div className="space-y-4">
@@ -174,7 +174,7 @@ export function SimulatorSection({ isModal = false }: { isModal?: boolean }) {
                           setLastModified("target")
                         }}
                         className={cn(
-                          "py-2.5 px-2 rounded-lg text-xs md:text-sm font-medium transition-all duration-200",
+                          "py-2 px-1 sm:px-2 rounded-lg text-[10px] sm:text-xs md:text-sm font-medium transition-all duration-200",
                           frequency === f
                             ? "bg-white dark:bg-slate-700 text-gold-dark dark:text-gold shadow-sm"
                             : "text-slate-500 hover:text-slate-700 dark:hover:text-slate-300"
@@ -241,8 +241,8 @@ export function SimulatorSection({ isModal = false }: { isModal?: boolean }) {
 
             {/* Result Card */}
             <div className="relative group h-full">
-              <div className="absolute -inset-1 bg-gradient-to-r from-gold-dark to-gold rounded-3xl blur opacity-25 group-hover:opacity-40 transition duration-1000 group-hover:duration-200"></div>
-              <div className="relative h-full bg-slate-900 dark:bg-slate-950 rounded-3xl p-8 flex flex-col justify-between border border-slate-800 shadow-2xl">
+              <div className="absolute -inset-1 bg-gradient-to-r from-gold-dark to-gold rounded-2xl sm:rounded-3xl blur opacity-25 group-hover:opacity-40 transition duration-1000 group-hover:duration-200"></div>
+              <div className="relative h-full bg-slate-900 dark:bg-slate-950 rounded-2xl sm:rounded-3xl p-6 sm:p-8 flex flex-col justify-between border border-slate-800 shadow-2xl">
                 <div>
                   <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-gold/10 text-gold text-xs font-semibold uppercase tracking-wider mb-8">
                     <Coins className="w-3.5 h-3.5" /> Simulation temps réel
@@ -253,10 +253,10 @@ export function SimulatorSection({ isModal = false }: { isModal?: boolean }) {
                       Pour atteindre <span className="text-white font-bold">{formatCurrency(targetAmount)}</span> en <span className="text-white font-bold">{durationMonths} mois</span> en épargnant chaque {getFrequencyLabel()}, tu dois mettre :
                     </p>
 
-                    <div className="py-8 border-y border-slate-800/50">
-                      <div className="text-5xl md:text-6xl font-black text-white tracking-tight flex items-baseline gap-2">
+                    <div className="py-6 sm:py-8 border-y border-slate-800/50">
+                      <div className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-black text-white tracking-tight flex flex-wrap items-baseline gap-2">
                         {formatCurrency(amountPerPayment)}
-                        <span className="text-xl font-medium text-slate-500">/{getFrequencyLabel()}</span>
+                        <span className="text-lg sm:text-xl font-medium text-slate-500">/{getFrequencyLabel()}</span>
                       </div>
                     </div>
                   </div>

@@ -63,24 +63,19 @@ export function SimulatorModal() {
 
         {/* We reuse the SimulatorSection but we might want to tweak its title for the modal context */}
         <div className="p-0 sm:p-4">
-          <div className="pt-8 -mb-16 text-center">
+          <div className="pt-10 sm:pt-12 text-center px-4">
              <span className="inline-block px-4 py-1.5 mb-4 text-xs font-bold tracking-widest text-gold-dark uppercase bg-gold/10 rounded-full">
               Offre Spéciale
             </span>
-            <h3 className="text-2xl md:text-3xl font-bold text-slate-900 dark:text-white">
+            <h3 className="text-xl md:text-3xl font-bold text-slate-900 dark:text-white">
               Prêt à réaliser vos projets ?
             </h3>
-            <p className="mt-2 text-slate-500 dark:text-slate-400">
+            <p className="mt-2 text-sm sm:text-base text-slate-500 dark:text-slate-400">
               Calculez votre épargne idéale en quelques secondes.
             </p>
           </div>
           
-          {/* We use the SimulatorSection content. 
-              Note: Since SimulatorSection is a section with padding, 
-              we might want to adjust it or create a more compact version.
-              For now, I'll use it as is but wrap it nicely.
-          */}
-          <div className="scale-90 sm:scale-100 origin-top">
+          <div className="w-full">
             <SimulatorSection isModal={true} />
           </div>
         </div>
