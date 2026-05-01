@@ -288,6 +288,59 @@ Après publication, vérifier :
 
 ---
 
+## 🚀 INTÉGRATION META (FACEBOOK) PIXEL VIA GTM
+
+Comme GTM est déjà installé sur le site, il est fortement recommandé d'utiliser GTM pour intégrer votre Meta Pixel. Voici la procédure étape par étape :
+
+### Étape 1 : Créer la Balise Meta Pixel (Initialisation)
+
+1. **GTM** → **Tags** → **Nouveau**
+2. **Nom du tag :** `Meta Pixel - Base Code`
+3. **Type de tag :** `Code HTML personnalisé` (Custom HTML)
+4. **Code :** Copiez et collez le code suivant (votre Pixel ID est déjà inclus) :
+```html
+<!-- Meta Pixel Code -->
+<script>
+!function(f,b,e,v,n,t,s)
+{if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+n.callMethod.apply(n,arguments):n.queue.push(arguments)};
+if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
+n.queue=[];t=b.createElement(e);t.async=!0;
+t.src=v;s=b.getElementsByTagName(e)[0];
+s.parentNode.insertBefore(t,s)}(window, document,'script',
+'https://connect.facebook.net/en_US/fbevents.js');
+fbq('init', '747263664629832');
+fbq('track', 'PageView');
+</script>
+<noscript><img height="1" width="1" style="display:none"
+src="https://www.facebook.com/tr?id=747263664629832&ev=PageView&noscript=1"
+/></noscript>
+<!-- End Meta Pixel Code -->
+```
+5. **Déclencheur (Trigger) :** `Initialization - All Pages` (ou `All Pages`)
+
+### Étape 2 : Tracker les événements spécifiques (Conversions)
+
+Pour tracker les clics sur les boutons (ex: Téléchargements) en tant qu'événements Facebook, vous pouvez créer un nouveau tag :
+
+1. **Nom du tag :** `Meta Pixel - Event Download`
+2. **Type :** `Code HTML personnalisé`
+3. **Code :**
+```html
+<script>
+  fbq('track', 'CompleteRegistration', { content_name: 'Download App' });
+</script>
+```
+4. **Déclencheur :** `Button Click - Download` (ou utilisez le trigger `All Button Clicks` avec une exception si nécessaire).
+
+### Étape 3 : Vérifier l'intégration
+
+1. Utilisez le **Mode Aperçu GTM** pour vérifier que le tag s'exécute.
+2. Installez l'extension Chrome **"Meta Pixel Helper"**.
+3. Naviguez sur votre site et vérifiez que le Pixel Helper affiche une coche verte pour `PageView`.
+
+---
+
 **Date de création :** 2024  
 **Dernière mise à jour :** 2024  
 **GTM ID :** GTM-NXZHZGKD  

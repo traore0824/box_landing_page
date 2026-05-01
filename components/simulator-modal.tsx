@@ -18,7 +18,7 @@ export function SimulatorModal() {
         setIsOpen(true)
         setShouldRender(true)
         sessionStorage.setItem("hasSeenSimulatorModal", "true")
-      }, 3000) // 3 seconds
+      }, 600) // 600 milliseconds
 
       return () => clearTimeout(timer)
     }
