@@ -93,7 +93,7 @@ export function HeroSection() {
               </div>
               <div className="w-1 h-1 bg-muted-foreground/30 rounded-full hidden sm:block" />
               <div className="flex items-center gap-2 bg-muted/50 px-3 py-1 rounded-full">
-                <span className="text-foreground font-bold text-lg">5,0⭐</span>
+                <span className="text-foreground font-bold text-lg">4,7⭐</span>
                 <span>sur Google Play</span>
               </div>
               <div className="w-1 h-1 bg-muted-foreground/30 rounded-full hidden sm:block" />
