@@ -38,8 +38,8 @@ export default function HomePage() {
               "Box permet aux entrepreneurs, commerçants, artisans, étudiants et particuliers d'épargner facilement et en toute sécurité.",
             "aggregateRating": {
               "@type": "AggregateRating",
-              "ratingValue": "4.8",
-              "ratingCount": "1000",
+              "ratingValue": "5.0",
+              "ratingCount": "4000",
             },
             "author": {
               "@type": "Organization",

@@ -26,12 +26,11 @@ export function HeroSection() {
         <div className="grid lg:grid-cols-2 gap-12 lg:gap-16 items-center">
           {/* Content */}
           <div className="text-center lg:text-left">
-            <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-foreground leading-tight mb-6 text-balance">
-              Prenez enfin le contrôle de vos <span className="text-primary">économies</span>
+            <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-foreground leading-tight mb-6 text-balance italic">
+              Épargne comme tu veux, quand tu veux, depuis ton téléphone.
             </h1>
 
             <p className="text-lg md:text-xl text-muted-foreground mb-8 max-w-xl mx-auto lg:mx-0 leading-relaxed">
-              {/* Rejoignez des milliers d&apos;utilisateurs qui font confiance à <strong>Box</strong> pour simplifier leur épargne. */}
               Que vous soyez entrepreneur, artisan ou particulier, <strong>Box</strong> sécurise votre argent et vous aide à atteindre
               vos objectifs financiers plus vite.
             </p>
@@ -86,13 +85,23 @@ export function HeroSection() {
               </Button>
             </div>
 
-
-
-
-            {/* <p className="text-sm md:text-base text-muted-foreground mt-6 max-w-xl mx-auto lg:mx-0 leading-relaxed">
-              Que vous soyez entrepreneur, artisan ou particulier, Box sécurise votre argent et vous aide à atteindre
-              vos objectifs financiers plus vite.
-            </p> */}
+            {/* Social Proof */}
+            <div className="mt-10 flex flex-wrap gap-x-6 gap-y-4 justify-center lg:justify-start items-center text-sm font-medium text-muted-foreground">
+              <div className="flex items-center gap-2 bg-muted/50 px-3 py-1 rounded-full">
+                <span className="text-foreground font-bold text-lg">+4 000</span>
+                <span>utilisateurs</span>
+              </div>
+              <div className="w-1 h-1 bg-muted-foreground/30 rounded-full hidden sm:block" />
+              <div className="flex items-center gap-2 bg-muted/50 px-3 py-1 rounded-full">
+                <span className="text-foreground font-bold text-lg">5,0⭐</span>
+                <span>sur Google Play</span>
+              </div>
+              <div className="w-1 h-1 bg-muted-foreground/30 rounded-full hidden sm:block" />
+              <div className="flex items-center gap-2 bg-muted/50 px-3 py-1 rounded-full">
+                <span className="text-foreground font-bold text-lg">+45M FCFA</span>
+                <span>épargnés</span>
+              </div>
+            </div>
           </div>
 
           <div className="relative flex justify-center lg:justify-end">
