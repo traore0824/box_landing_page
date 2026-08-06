@@ -35,7 +35,6 @@ export function HeroSection() {
               vos objectifs financiers plus vite.
             </p>
 
-
             {/* Download Buttons */}
             <div className="flex flex-col sm:flex-row gap-4 justify-center lg:justify-start">
               <Button
@@ -88,7 +87,7 @@ export function HeroSection() {
             {/* Social Proof */}
             <div className="mt-10 flex flex-wrap gap-x-6 gap-y-4 justify-center lg:justify-start items-center text-sm font-medium text-muted-foreground">
               <div className="flex items-center gap-2 bg-muted/50 px-3 py-1 rounded-full">
-                <span className="text-foreground font-bold text-lg">+4 000</span>
+                <span className="text-foreground font-bold text-lg">+10 000</span>
                 <span>utilisateurs</span>
               </div>
               <div className="w-1 h-1 bg-muted-foreground/30 rounded-full hidden sm:block" />
